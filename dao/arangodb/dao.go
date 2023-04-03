@@ -15,7 +15,8 @@ type Token struct {
 	Key        string `json:"_key,omitempty"`
 	AccountId  string `json:"accountId"` // Account Key
 	Token      string `json:"token"`
-	CreateTime string `json:"createTime"`
+	CreateTime int64  `json:"createTime"`
+	ExpTime    int64  `json:"expTime"`
 }
 
 // 供應商簡介: 遊戲供應商, 網站供應商索引
