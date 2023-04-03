@@ -14,6 +14,7 @@ type Account struct {
 type Token struct {
 	Key        string `json:"_key,omitempty"`
 	AccountId  string `json:"accountId"` // Account Key
+	IP         string `json:"ip"`
 	Token      string `json:"token"`
 	CreateTime int64  `json:"createTime"`
 	ExpTime    int64  `json:"expTime"`
