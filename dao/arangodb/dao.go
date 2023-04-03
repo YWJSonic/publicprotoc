@@ -2,7 +2,7 @@ package daoarangodb
 
 // 帳號資料: 廠商帳號, 管理員帳號
 type Account struct {
-	Key         string `json:"_key"`
+	Key         string `json:"_key,omitempty"`
 	AccountName string `json:"accountName"`
 	Password    string `json:"password"`
 	LastLogin   string `json:"lastLogin"`
@@ -12,7 +12,7 @@ type Account struct {
 }
 
 type Token struct {
-	Key        string `json:"_key"`
+	Key        string `json:"_key,omitempty"`
 	AccountId  string `json:"accountId"` // Account Key
 	Token      string `json:"token"`
 	CreateTime string `json:"createTime"`
