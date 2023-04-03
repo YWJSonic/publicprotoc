@@ -2,13 +2,20 @@ package daoarangodb
 
 // 帳號資料: 廠商帳號, 管理員帳號
 type Account struct {
-	Key         string `json:"_key,omitempty"`
+	Key         string `json:"_key"`
 	AccountName string `json:"accountName"`
 	Password    string `json:"password"`
 	LastLogin   string `json:"lastLogin"`
 	CreatTime   string `json:"creatTime"`
 	Token       string `json:"token"`
 	Permission  string `json:"permission"`
+}
+
+type Token struct {
+	Key        string `json:"_key"`
+	AccountId  string `json:"accountId"` // Account Key
+	Token      string `json:"token"`
+	CreateTime string `json:"createTime"`
 }
 
 // 供應商簡介: 遊戲供應商, 網站供應商索引
