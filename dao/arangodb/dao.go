@@ -28,21 +28,21 @@ type Provider struct {
 }
 
 type Game struct {
-	Key        string      `json:"_key,omitempty"`
-	Name       string      `json:"name"`
-	ProviderId string      `json:"providerId"`
-	Setting    interface{} `json:"setting"`
+	Key        string                 `json:"_key,omitempty"`
+	Name       string                 `json:"name"`
+	ProviderId string                 `json:"providerId"`
+	Setting    map[string]interface{} `json:"setting"`
 }
 
 type ProviderSetting struct {
-	Key        string      `json:"_key,omitempty"`
-	ProviderId string      `json:"providerId"`
-	Setting    interface{} `json:"setting"`
+	Key        string                 `json:"_key,omitempty"`
+	ProviderId string                 `json:"providerId"`
+	Setting    map[string]interface{} `json:"setting"`
 }
 
 type DefaultSetting struct {
-	Key         string      `json:"_key,omitempty"`
-	SettingType string      `json:"settingType"` // 此設定類型 provider setting, game setting
-	OwnerKey    string      `json:"ownerKey"`    // 預設使用者
-	Setting     interface{} `json:"setting"`
+	Key         string                 `json:"_key,omitempty"`
+	SettingType string                 `json:"settingType"` // 此設定類型 provider setting, game setting
+	OwnerKey    string                 `json:"ownerKey"`    // 預設使用者
+	Setting     map[string]interface{} `json:"setting"`
 }
